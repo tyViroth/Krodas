@@ -1,4 +1,4 @@
-package com.krodas.localimage.util
+package com.krodas.app.util
 
 import android.content.Context
 

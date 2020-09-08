@@ -1,4 +1,4 @@
-package com.krodas.localimage.adapter
+package com.krodas.app.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.krodas.localimage.R
-import com.krodas.localimage.listener.ClickListener
-import com.krodas.localimage.model.Post
+import com.krodas.app.R
+import com.krodas.app.listener.ClickListener
+import com.krodas.app.model.Post
 
 
 class MainAdapter(private val clickListener: ClickListener):
@@ -26,22 +26,18 @@ class MainAdapter(private val clickListener: ClickListener):
           holder.binding(item = getItem(position), clickListener = clickListener)
      }
 
-     override fun getItemCount(): Int = when (val count = super.getItemCount()) {
-          0 -> 1
-          else -> count
-     }
+     override fun getItemCount(): Int = super.getItemCount()
 
      class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
           private var imageView = itemView.findViewById<ImageView>(R.id.postImageView)
           fun binding(item: Post, clickListener: ClickListener) {
                val myOptions = RequestOptions()
-                    .override(400, 400)
+                    .encodeQuality(40)
 
                Glide.with(itemView)
                     .asBitmap()
                     .apply(myOptions)
                     .load(item.url)
-                    .circleCrop()
                     .into(imageView)
 
                itemView.setOnClickListener {

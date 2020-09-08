@@ -1,4 +1,4 @@
-package com.krodas.localimage
+package com.krodas.app
 
 import org.junit.Test
 

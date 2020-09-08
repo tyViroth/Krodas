@@ -1,14 +1,13 @@
-package com.krodas.localimage
+package com.krodas.app
 
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.krodas.localimage.ui.main.MainFragment
+import com.krodas.app.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

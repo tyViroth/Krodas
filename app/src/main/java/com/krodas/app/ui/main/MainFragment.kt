@@ -1,4 +1,4 @@
-package com.krodas.localimage.ui.main
+package com.krodas.app.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,11 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import com.krodas.localimage.R
-import com.krodas.localimage.adapter.MainAdapter
-import com.krodas.localimage.handler.ResultOf
-import com.krodas.localimage.listener.ClickListener
-import com.krodas.localimage.model.Post
+import com.krodas.app.R
+import com.krodas.app.adapter.MainAdapter
+import com.krodas.app.handler.ResultOf
+import com.krodas.app.listener.ClickListener
+import com.krodas.app.model.Post
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {

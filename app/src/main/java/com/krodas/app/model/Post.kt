@@ -1,4 +1,4 @@
-package com.krodas.localimage.model
+package com.krodas.app.model
 
 import android.net.Uri
 

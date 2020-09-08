@@ -1,4 +1,4 @@
-package com.krodas.localimage
+package com.krodas.app
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
