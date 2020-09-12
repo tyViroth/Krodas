@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.krodas.app.R
 import com.krodas.app.adapter.MainAdapter
 import com.krodas.app.handler.ResultOf
@@ -64,10 +65,14 @@ class MainFragment : Fragment() {
             }
         })
 
-        mainRecyclerView.apply {
-            layoutManager = GridLayoutManager(context, 2)
+        val mLayoutManager = StaggeredGridLayoutManager(2, 1)
+        mLayoutManager.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS
+            mainRecyclerView.apply {
+            layoutManager = mLayoutManager
             adapter = mainAdapter
             setHasFixedSize(true)
+                setItemViewCacheSize(20)
         }
     }
+
 }

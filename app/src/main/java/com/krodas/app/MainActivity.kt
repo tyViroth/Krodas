@@ -21,13 +21,14 @@ class MainActivity : AppCompatActivity() {
         val requiredPermission = Manifest.permission.WRITE_EXTERNAL_STORAGE
         val checkVal: Int = applicationContext.checkCallingOrSelfPermission(requiredPermission)
 
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commitNow()
-        }
         fullScreen()
         checkPermission(isGranted = checkVal)
+    }
+
+    private fun initView() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, MainFragment.newInstance())
+            .commitNow()
     }
 
     private fun fullScreen() {
@@ -37,9 +38,10 @@ class MainActivity : AppCompatActivity() {
         )
 
     }
+
     private fun checkPermission(isGranted: Int = 0) {
         if (isGranted == PackageManager.PERMISSION_GRANTED) {
-            return
+            initView()
         } else {
             requestPermission()
         }
@@ -73,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == storagePermissionCode) {
             if (grantResults.isNotEmpty() && grantResults[0] <= PackageManager.PERMISSION_GRANTED) {
-                println("Permission Granted, Now you can use local drive .")
+                initView()
             } else {
                 println("Permission Denied, You cannot use local drive .");
             }
