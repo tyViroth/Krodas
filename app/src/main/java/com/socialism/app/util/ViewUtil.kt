@@ -1,4 +1,4 @@
-package com.krodas.app.util
+package com.socialism.app.util
 
 import android.content.Context
 

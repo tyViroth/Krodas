@@ -1,4 +1,4 @@
-package com.krodas.app.listener
+package com.socialism.app.listener
 
 interface ISize {
     fun width(): Int

@@ -1,4 +1,4 @@
-package com.krodas.app
+package com.socialism.app
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -7,7 +7,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.krodas.app.ui.main.MainFragment
+import com.socialism.app.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

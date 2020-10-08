@@ -1,6 +1,6 @@
-package com.krodas.app.util
+package com.socialism.app.util
 
-import com.krodas.app.listener.ISize
+import com.socialism.app.listener.ISize
 
 class SizeEqualHashCode {
     companion object {

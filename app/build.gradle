@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'androidx.navigation.safeargs'
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.krodas.app"
+        applicationId "com.socialism.app"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -42,6 +43,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'androidx.recyclerview:recyclerview-selection:1.0.0'
 
     implementation "androidx.cardview:cardview:1.0.0"
 

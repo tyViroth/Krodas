@@ -1,4 +1,4 @@
-package com.krodas.app
+package com.socialism.app
 
 import org.junit.Test
 

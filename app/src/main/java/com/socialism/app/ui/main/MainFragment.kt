@@ -1,4 +1,4 @@
-package com.krodas.app.ui.main
+package com.socialism.app.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.krodas.app.R
-import com.krodas.app.adapter.MainAdapter
-import com.krodas.app.handler.ResultOf
-import com.krodas.app.listener.ClickListener
-import com.krodas.app.model.Post
+import com.socialism.app.R
+import com.socialism.app.adapter.MainAdapter
+import com.socialism.app.handler.ResultOf
+import com.socialism.app.listener.ClickListener
+import com.socialism.app.model.Post
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {
@@ -32,7 +31,6 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         return inflater.inflate(R.layout.main_fragment, container, false)
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

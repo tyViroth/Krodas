@@ -1,4 +1,4 @@
-package com.krodas.app.handler
+package com.socialism.app.handler
 
 sealed class ResultOf<out R> {
     data class Success<out T>(val data: T) : ResultOf<T>()

@@ -1,10 +1,10 @@
-package com.krodas.app.repository
+package com.socialism.app.repository
 
 import android.app.Activity
 import android.database.Cursor
 import android.net.Uri
 import android.provider.MediaStore
-import com.krodas.app.model.Post
+import com.socialism.app.model.Post
 
 
 class LocalService {
